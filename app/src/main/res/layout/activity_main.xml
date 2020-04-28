@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/titlesr"
+      android:textSize="30sp"
+      android:textColor="@color/colorPrimary"
+      android:textAlignment="center"
+      android:gravity="center_horizontal" />
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+    <EditText
+        android:id="@+id/regionname"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:hint="Region Name"/>
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:hint="  Average Age" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/income"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:hint="  Avg Daily Income" />
+
+    <EditText
+        android:id="@+id/avgpopulat"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:hint="  Avg Population" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/periodType"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:text="  Period Type" />
+
+    <Spinner
+        android:id="@+id/pTypes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/elapsedTime"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:hint="  Time to Elapse" />
+
+    <EditText
+        android:id="@+id/reportedCases"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:hint="  Reported Cases" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/population"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:hint="  Population" />
+
+    <EditText
+        android:id="@+id/totalHospBeds"
+        android:layout_width="188dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:hint="  Total Hospital Beds" />
+  </LinearLayout>
+  <Button
+      android:id="@+id/estimateData"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Go to Estimate"/>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Indicators" />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="Impact(Normal)"/>
+
+    <TextView
+        android:layout_width="97dp"
+        android:layout_height="match_parent"
+        android:text="Severe" />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Currently infected" />
+    <TextView
+        android:id="@+id/impactCurrent"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/severeCurrent"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
+        android:text="0" />
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Infections By RT" />
+    <TextView
+        android:id="@+id/impactIBRT"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/severeIBRT"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
+        android:text="0" />
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Cases By RT" />
+    <TextView
+        android:id="@+id/impactCBRT"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/severeCBRT"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
+        android:text="0" />
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Hospital BedsBy RT" />
+    <TextView
+        android:id="@+id/impactHBRT"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/severeHBRT"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
+        android:text="0" />
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+      <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Cases for ICU By RT" />
+    <TextView
+        android:id="@+id/impactICU"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/severeICU"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
+        android:text="0" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Cases for Ventilators" />
+    <TextView
+        android:id="@+id/impactVent"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/severeVent"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
+        android:text="0" />
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="  Dollars in Flight" />
+    <TextView
+        android:id="@+id/impactDollar"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/severeDollar"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
+        android:text="0" />
+
+  </LinearLayout>
+</LinearLayout>

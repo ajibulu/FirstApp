@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FirstApp</string>
+    <string name="stud_data">S T U D E N T D A T A</string>
+    <string name="employee_name">Employee Name</string>
+    <string name="insert_data">Insert Data</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="designation">Designation</string>
+    <string name="company">Company</string>
+    <string name="titlesr">Covid-19 Estimator</string>
+</resources>
